@@ -26,8 +26,8 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(inv)
   }
-  data <- x$get()          ## If the inverse of the matrix in parameter is not in the cache we
-  inv <- solve(data, ...)  ##  calculate it with the solve function 
+  data <- x$get()          ## If the inverse of the matrix in parameter is not in the cache we(...)
+  inv <- solve(data, ...)  ##  (..)calculate it with the solve function 
   x$setinverse(inv)        ## Modify the inverse matrix in the cache       
   inv                      ## Return the inverse of the matrix x             
 }
